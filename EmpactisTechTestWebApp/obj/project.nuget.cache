@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Nj873gpto5puqc3jTzPS3xqZbjjd9StgwzvF1Y6MmjRZz3yHf2C9YFFoPj+a4b/uoEt+aQ2hpqgO6LxccCpvHw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\adamo\\OneDrive\\Documents\\GitHub\\EmpactisTechnicalTest\\EmpactisTechTestWebApp\\EmpactisTechTestWebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\adamo\\.nuget\\packages\\bootstrap\\5.1.0\\bootstrap.5.1.0.nupkg.sha512",
+    "C:\\Users\\adamo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

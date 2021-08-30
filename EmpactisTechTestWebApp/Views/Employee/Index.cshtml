@@ -1,0 +1,39 @@
+﻿@model EmpactisTechTestWebApp.Models.EmployeeViewModel
+@{ 
+    ViewData["Title"] = "Employees";
+}
+
+<body>
+    <h2>Employees</h2>
+   <table class="table-striped table-borderless table">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th>Absent Periods</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ 
+                foreach(var item in Model.Employees)
+                {
+                    <tr class="AbsentLink" onclick="location.href='@Url.Action("AbsenceInformation", "Employee", new  { employeeID = item.EmployeeNumber })'">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Department)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AbsenceCount)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>

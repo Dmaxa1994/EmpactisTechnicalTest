@@ -1,0 +1,44 @@
+﻿@model EmpactisTechTestWebApp.Models.Employee
+@{
+    ViewData["Title"] = "Employee Absence Record";
+}
+
+<body>
+    <h2>Employee Absence Record</h2>
+    <p>
+        <h6>Employee: @Html.DisplayFor(modelItem => Model.EmployeeName)</h6>
+        <h6>Department: @Html.DisplayFor(modelItem => Model.Department)</h6>
+        <h6>Total Periods of Absence: @Html.DisplayFor(modelItem => Model.AbsenceCount)</h6>
+    </p>
+    <table class="table-striped table">
+        <thead>
+            <tr>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Absence Type</th>
+                <th>Total Days</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model.Absences)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartDateDisplay)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndDateDisplay)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AbsenceType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TotalDaysInAbsencePeriod)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>
